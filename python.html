@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-divice-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <title>My Webpage</title>
+    </head>
+    <body style = "background-image: linear-gradient(to right, green, black)">
+
+        <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light">
+
+            <a
+            href="https://github.com/lxjonathanxl" target="_blank"
+            class="navbar-brand mb-0 h2">
+                <img
+                class="d-inline-block aling-top"
+                alt="github"
+                src="images/github.png"
+                width="30">
+                Jonathan
+            </a>
+            <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            class="navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="index.html" class="nav-link active">
+                            <strong>sobre</strong>
+                        </a>
+                    </li>
+                    <li class="nav-item active dropdown">
+                        <a href="c.html" class="nav-link dropdown-toggle active"
+                        data-bs-toggle="dropdown">
+                            <strong>C</strong>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="c.html" class="dropdown-iten">Tideman</a></li>
+                            <li><a href="c.html#musica" class="dropdown-iten">musica</a></li>
+                            <li><a href="#" class="dropdown-iten">blablabla</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item active dropdown">
+                        <a href="#" class="nav-link dropdown-toggle"
+                        data-bs-toggle="dropdown">
+                            <strong>python</strong>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="python.html" class="dropdown-iten">DNA</a></li>
+                            <li><a href="#" class="dropdown-iten">blablabla</a></li>
+                            <li><a href="#" class="dropdown-iten">blablabla</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="header">
+            <h2 style="color: grey"><strong>PROJETOS</strong></h2>
+          </div>
+
+          <div class="column tideman" style="background-color:#ccc;">
+            <a href="https://github.com/me50/lxjonathanxl/blob/8a28c999732b1433c3d35a9e08bdbf4f78c1051a/dna.py" target="_blank">
+                <img class="code" src="images/dna.png" onmouseover="grow_image(this)" onmouseout="original_image(this)" alt="tideman code">
+            </a>
+                <div class="tideman_text">
+                <h4><strong>dna</strong></h4>
+                <p>Este código Python é um programa que implementa a análise de correspondências de STRs (Short Tandem Repeats) em sequências de DNA, a fim de identificar perfis genéticos correspondentes em um banco de dados. Aqui está uma explicação completa do que o código faz:</p>
+                <ol>
+                    <li><dl>
+                        <dt>Verificação de Uso da Linha de Comando:</dt>
+                        <dd>O código verifica se o programa foi executado corretamente a partir da linha de comando, aceitando exatamente três argumentos de linha de comando: o nome do script, o nome do arquivo CSV de dados e o nome do arquivo TXT da sequência.</dd>
+                    </dl></li>
+                    <li><dl>
+                        <dt>Leitura do Arquivo de Banco de Dados:</dt>
+                        <dd>O código lê o arquivo de banco de dados CSV e armazena suas informações em uma lista chamada "profiles". Ele utiliza a biblioteca `csv` do Python para ler o arquivo e transforma cada linha em um dicionário de perfis.</dd>
+                    </dl></li>
+                    <li><dl>
+                        <dt>Leitura do Arquivo de Sequência de DNA:</dt>
+                        <dd>O código lê o arquivo de sequência de DNA e armazena seu conteúdo em uma variável chamada "sequence".</dd>
+                    </dl></li>
+                    <li><dl>
+                        <dt>Encontrar a Maior Correspondência de Cada STR na Sequência de DNA:</dt>
+                        <dd>O código identifica os nomes das STRs (Short Tandem Repeats) a serem analisadas. Para cada STR, ele chama a função "longest_match()" para encontrar a maior correspondência de subsequências na sequência de DNA.</dd>
+                    </dl></li>
+                    <li><dl>
+                        <dt>Verificação de Perfis Correspondentes no Banco de Dados:</dt>
+                        <dd>O código compara as correspondências de STRs na sequência de DNA com os perfis no banco de dados. Ele percorre os perfis um por um, contando o número de STRs que correspondem aos perfis. Se todas as STRs correspondem a um perfil, o código imprime o nome do indivíduo associado a esse perfil. Caso contrário, imprime "No match".</dd>
+                    </dl></li>
+                    <li><dl>
+                        <dt>Função "longest_match()":</dt>
+                        <dd>Uma função auxiliar que calcula o comprimento da maior sequência consecutiva de uma subsequência dentro da sequência de DNA. Ele verifica cada caractere na sequência em busca das sequências mais longas de correspondência.</dd>
+                    </dl></li>
+                </ol>
+                <p>
+                    Em resumo, o programa lê um banco de dados de perfis genéticos, uma sequência de DNA a ser analisada e, em seguida, procura por correspondências de STRs na sequência de DNA em comparação com o banco de dados. Se um perfil corresponder completamente, o programa imprime o nome associado a esse perfil. Caso contrário, ele imprime "No match". Isso é útil para fins de análise forense e identificação genética.
+                </p>
+            </div>
+
+        </div>
+
+
+
+
+        </body>
